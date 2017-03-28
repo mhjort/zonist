@@ -19,4 +19,14 @@ public class ZonistTest {
         expected.put("trolo", "bolo");
         assertThat(Zonist.parse(json), is(equalTo(expected)));
     }
+
+    @Test
+    public void unparsesMapWithDepthOneToJson() {
+        String json = "{\"foo\": 1,\"trolo\": \"bolo\"}";
+
+        final Map map = new HashMap();
+        map.put("foo", 1);
+        map.put("trolo", "bolo");
+        assertThat(Zonist.unparse(map), is(equalTo(json)));
+    }
 }
