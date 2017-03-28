@@ -1,4 +1,6 @@
+package json;
 
+import json.Zonist;
 import org.junit.Test;
 
 import java.util.HashMap;
